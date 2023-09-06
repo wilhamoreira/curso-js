@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resulado</p>
+    <p>Apredendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="mensagem" name="msg">Clique em mim</div>
+
+    <script>
+        var corpo = document.body // recebendo a tag boy
+        corpo.style.background = 'black' //mudando o background
+        
+        var p1 = document.getElementsByTagName('p')[1] // recebendo varios elementos e selecionando o primeiro P
+        p1.style.color = 'blue' // adicionando um estilo ao P selecionado
+        document.write(`Está escrito assim :  ${p1.innerText}`) // mostrado o resultado sem estrutura html
+        document.write(`Está escrito assim :  ${p1.innerHTML}`) // mostrnao o resultado com a estrutura html
+        
+        // var d = document.getElementById('mensagem') // selecionando div pelo id
+        // d.style.background = 'green' // modificando p background da div
+        // d.innerText = 'Estou aguardando' // modificando o texto da div
+
+        var d = document.querySelector('div#mensagem')
+        d.style.background = 'green' // modificando p background da div
+
+
+    </script>
+</body>
+</html>
